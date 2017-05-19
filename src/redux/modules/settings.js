@@ -55,7 +55,7 @@ export default function reducer(state = initialState, action = {}) {
 export function saveConfig(data) {
   return {
     types: [SAVE, SAVE_SUCCESS, SAVE_FAIL],
-    promise: (client) => client.put('/user/me/apiConfig', {
+    promise: (client) => client.post('/user/me/apiConfig', {
       data
     })
   };
